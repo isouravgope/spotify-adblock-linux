@@ -13,7 +13,7 @@ git clone https://github.com/abba23/spotify-adblock-linux.git -b master spotifya
 spotifyextra=`find /home -iname "*spotifyadblock*"`
 cd $spotifyextra
 echo -e "adding the cef chromium framework"
-wget -O cef.tar.bz2 http://opensource.spotify.com/cefbuilds/cef_binary_80.0.8%2Bgf96cd1d%2Bchromium-80.0.3987.132_linux64_minimal.tar.bz2
+wget -O cef.tar.bz2 https://cef-builds.spotifycdn.com/cef_binary_88.1.6%2Bg4fe33a1%2Bchromium-88.0.4324.96_linux64_minimal.tar.bz2wget -O cef.tar.bz2 https://cef-builds.spotifycdn.com/cef_binary_88.1.6%2Bg4fe33a1%2Bchromium-88.0.4324.96_linux64_minimal.tar.bz2
 
 sleep 2s && echo -e "decompressing the framework"
 sleep 2s
