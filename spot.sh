@@ -9,16 +9,15 @@ cd ~/Downloads
 echo -e "installing the necessary package"
 
 sudo apt-get install git gcc wget curl
-git clone https://github.com/abba23/spotify-adblock-linux.git -b master spotifyadblock && mv spotifyad* 'spot stuff'
-
-cd 'spot stuff'
-
+git clone https://github.com/abba23/spotify-adblock-linux.git -b master spotifyadblockextra
+spotifyextra=`find /home -iname "*spotifyadblock*"`
+cd $spotifyextra
 echo -e "adding the cef chromium framework"
 wget -O cef.tar.bz2 http://opensource.spotify.com/cefbuilds/cef_binary_80.0.8%2Bgf96cd1d%2Bchromium-80.0.3987.132_linux64_minimal.tar.bz2
 
 sleep 2s && echo -e "decompressing the framework"
 sleep 2s
-tar -xf cef.tar.bz2 --wildcards '*/include' --strip-components=1
+tar -xvf cef.tar.bz2 --wildcards '*/include' --strip-components=1
 
 make
 echo -e "installing the elf binary"
