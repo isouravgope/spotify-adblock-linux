@@ -1,7 +1,12 @@
 #!/usr/bin/bash
 
 echo -e "starting the process"
-sudo dpkg -i spotify-client_1.1.42.622.gbd112320-37_amd64.deb && sudo apt-get install -f 
+blue=$(tput setaf 6)
+wget https://github.com/Project-Junk/spotify-adblock-linux-/blob/main/spotify-client-0.9.17_0.9.17.8.gd06432d.31-1_amd64.deb?raw=true --output-document=spotify-client-0.9.17_0.9.17.8.gd06432d.31-1_amd64.deb
+
+debfile=`find /home -iname "*spotify-client-0.9.17_0.9.17.8.gd06432d.31-1_amd64.deb*"`
+echo ${blue}"found spotify deb file on" $debfile ${txtrst}
+sudo dpkg -i $debfile && sudo apt-get install -f 
 sudo dpkg --configure -a
 
 sleep 2s
