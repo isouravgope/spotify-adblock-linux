@@ -15,7 +15,7 @@ sleep 2s
 cd ~/Downloads
 echo -e "installing the necessary package"
 
-sudo apt-get install git gcc wget curl libcurl4-gnutls-dev rustc
+sudo apt-get install git gcc wget curl libcurl4-gnutls-dev rustc cargo
 git clone https://github.com/abba23/spotify-adblock.git -b main spotifyadblockextra
 spotifyextra=`find /home -iname "*spotifyadblock*"`
 cd $spotifyextra
