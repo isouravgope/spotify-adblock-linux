@@ -10,6 +10,7 @@ debfile=`find /home -iname "*spotify-client_1*amd64.deb"`
 echo ${blue}"found spotify deb file on" $debfile ${txtrst}
 sudo dpkg -i $debfile && sudo apt-get install -f 
 sudo dpkg --configure -a
+sudo apt --fix-broken install
 
 sleep 2s
 cd ~/Downloads
