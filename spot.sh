@@ -6,7 +6,7 @@ cd ~
 
 wget http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.1.72.439.gc253025e_amd64.deb
 
-debfile=`find /home -iname "*spotify-client_1*amd64.deb"`
+debfile=`find -L /home -iname "*spotify-client_1*amd64.deb"`
 echo ${blue}"found spotify deb file on" $debfile ${txtrst}
 sudo dpkg -i $debfile && sudo apt-get install -f 
 sudo dpkg --configure -a
@@ -18,7 +18,7 @@ echo -e "installing the necessary package"
 
 sudo apt-get install git gcc wget curl libcurl4-gnutls-dev rustc cargo
 git clone https://github.com/abba23/spotify-adblock.git -b main spotifyadblockextra
-spotifyextra=`find /home -iname "*spotifyadblock*"`
+spotifyextra=`find -L /home -iname "*spotifyadblock*"`
 cd $spotifyextra
 
 
